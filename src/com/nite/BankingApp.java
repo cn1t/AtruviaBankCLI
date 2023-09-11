@@ -85,7 +85,7 @@ public class BankingApp {
         clearTerminal();
         System.out.println(asciiBanner);
         System.out.println("Hallo " + sampleAccount.getName() + "! Was möchten Sie tun?");
-        manageOptions(new String[]{"Guthaben sehen", "Geld versenden", "Transaktionen", "Passwort zurücksetzen"});
+        manageOptions(new String[]{"Guthaben sehen", "Geld versenden", "Transaktionen", "Passwort zurücksetzen", "Ausloggen"});
     }
 
     public static void guthaben_sehen() {
@@ -165,5 +165,12 @@ public class BankingApp {
             TimeUnit.SECONDS.sleep(1);
             menue();
         }
+    }
+
+    public static void ausloggen() {
+        clearTerminal();
+        System.out.println(asciiBanner);
+        System.out.println("Willkommen zum Atruvia Bank System!");
+        manageOptions(new String[]{"Login"});
     }
 }
