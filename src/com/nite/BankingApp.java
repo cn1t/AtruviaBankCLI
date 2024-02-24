@@ -85,14 +85,8 @@ public class BankingApp {
         clearTerminal();
         System.out.println(asciiBanner);
         System.out.println("Hallo " + sampleAccount.getName() + "! Was möchten Sie tun?");
-        manageOptions(new String[]{"Guthaben sehen", "Geld versenden", "Transaktionen", "Passwort zurücksetzen", "Ausloggen"});
-    }
-
-    public static void guthaben_sehen() {
-        clearTerminal();
-        System.out.println(asciiBanner);
-        System.out.println("Du hast " + sampleAccount.getBalance() + "€ auf dem Konto.");
-        manageOptions(new String[]{"Menü"});
+        System.out.println("Guthaben: " + sampleAccount.getBalance() + "€");
+        manageOptions(new String[]{"Geld versenden", "Transaktionen", "Passwort zurücksetzen"});
     }
 
     public static void geld_versenden() throws InterruptedException {
@@ -165,12 +159,5 @@ public class BankingApp {
             TimeUnit.SECONDS.sleep(1);
             menue();
         }
-    }
-
-    public static void ausloggen() {
-        clearTerminal();
-        System.out.println(asciiBanner);
-        System.out.println("Willkommen zum Atruvia Bank System!");
-        manageOptions(new String[]{"Login"});
     }
 }
